@@ -1,0 +1,759 @@
+{
+	"info": {
+		"_postman_id": "4aa3635e-2251-4afb-969b-9d19c7adab7d",
+		"name": "Book Store API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30228492"
+	},
+	"item": [
+		{
+			"name": "Book",
+			"item": [
+				{
+					"name": "Save Book",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"How to Make an API\",\r\n  \"author\": \"Homer Simpson\",\r\n  \"isbn\": \"1234567890\",\r\n  \"publisher\": \"Marvel\",\r\n  \"publicationDate\": \"2023-11-04\",\r\n  \"language\": \"English\",\r\n  \"category\": \"Software\",\r\n  \"format\": \"Paperback\",\r\n  \"edition\": \"1st Edition\",\r\n  \"inventory\": \"100\",\r\n  \"price\": \"$19.99\",\r\n  \"status\": \"Available\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/books/save",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"books",
+								"save"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Save Book",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"title\": \"How to Make an API\",\r\n  \"author\": \"Homer Simpson\",\r\n  \"isbn\": \"1234567890\",\r\n  \"publisher\": \"Marvel\",\r\n  \"publicationDate\": \"2023-11-04\",\r\n  \"language\": \"English\",\r\n  \"category\": \"Software\",\r\n  \"format\": \"Paperback\",\r\n  \"edition\": \"1st Edition\",\r\n  \"inventory\": \"100\",\r\n  \"price\": \"$19.99\",\r\n  \"status\": \"Available\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/books/save",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"books",
+										"save"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 05 Nov 2023 00:27:18 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"title\": \"How to Make an API\",\n    \"author\": \"Homer Simpson\",\n    \"isbn\": \"1234567890\",\n    \"publisher\": \"Marvel\",\n    \"publicationDate\": \"2023-11-04\",\n    \"language\": \"English\",\n    \"category\": \"Software\",\n    \"format\": \"Paperback\",\n    \"edition\": \"1st Edition\",\n    \"inventory\": \"100\",\n    \"price\": \"$19.99\",\n    \"status\": \"Available\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Book by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/books/findById?id=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"books",
+								"findById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Book by Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/books/findById?id=1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"books",
+										"findById"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 05 Nov 2023 00:27:24 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"title\": \"How to Make an API\",\n    \"author\": \"Homer Simpson\",\n    \"isbn\": \"1234567890\",\n    \"publisher\": \"Marvel\",\n    \"publicationDate\": \"2023-11-04\",\n    \"language\": \"English\",\n    \"category\": \"Software\",\n    \"format\": \"Paperback\",\n    \"edition\": \"1st Edition\",\n    \"inventory\": \"100\",\n    \"price\": \"$19.99\",\n    \"status\": \"Available\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Book",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/books/delete?id=52",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"books",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "52"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Book",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/books/delete?id=1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"books",
+										"delete"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "25"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 05 Nov 2023 00:28:06 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "Book deleted successfully"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"Rafael\",\r\n  \"lastName\": \"Melo\",\r\n  \"email\": \"rafael@melo.com\",\r\n  \"phoneNumber\": \"123-456-7890\",\r\n  \"address\": \"5500 Pie IX\",\r\n  \"status\": \"Active\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					},
+					"response": [
+						{
+							"name": "Save",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"firstName\": \"Rafael\",\r\n  \"lastName\": \"Melo\",\r\n  \"email\": \"rafael@melo.com\",\r\n  \"phoneNumber\": \"123-456-7890\",\r\n  \"address\": \"5500 Pie IX\",\r\n  \"status\": \"Active\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/customers/save",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"customers",
+										"save"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 05 Nov 2023 00:28:54 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"firstName\": \"Rafael\",\n    \"lastName\": \"Melo\",\n    \"email\": \"rafael@melo.com\",\n    \"phoneNumber\": \"123-456-7890\",\n    \"address\": \"5500 Pie IX\",\n    \"status\": \"Active\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get customer By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/customers/findById?id=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customers",
+								"findById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get customer By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/customers/findById?id=1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"customers",
+										"findById"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 05 Nov 2023 00:29:23 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"firstName\": \"Rafael\",\n    \"lastName\": \"Melo\",\n    \"email\": \"rafael@melo.com\",\n    \"phoneNumber\": \"123-456-7890\",\n    \"address\": \"5500 Pie IX\",\n    \"status\": \"Active\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/customers/delete?id=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customers",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Customer",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/customers/delete?id=1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"customers",
+										"delete"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "29"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 05 Nov 2023 00:29:32 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "Customer deleted successfully"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "Order Details",
+					"item": [
+						{
+							"name": "Save Order Detail",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n \"date\": \"2023-11-04\",\r\n  \"book\": \"How to Make an API\",\r\n  \"quantity\": \"3\",\r\n  \"total\": \"$59.97\",\r\n  \"orderId\": 12345,\r\n  \"status\": \"true\"\r\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/ordersDetails/save",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"ordersDetails",
+										"save"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Save Order Detail",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": " {\r\n \"date\": \"2023-11-04\",\r\n  \"book\": \"How to Make an API\",\r\n  \"quantity\": \"3\",\r\n  \"total\": \"$59.97\",\r\n  \"orderId\": 12345,\r\n  \"status\": \"true\"\r\n }",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8080/ordersDetails/save",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"ordersDetails",
+												"save"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 05 Nov 2023 00:34:24 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"date\": \"2023-11-04\",\n    \"status\": \"true\",\n    \"total\": \"$59.97\",\n    \"quantity\": \"3\",\n    \"orderId\": 12345,\n    \"book\": \"How to Make an API\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Find Order Detail by Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/ordersDetails/findById?id=12345",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"ordersDetails",
+										"findById"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "12345"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Order Detail",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/ordersDetails/delete?id=1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"ordersDetails",
+										"delete"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Save Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"date\": \"2023-11-04\",\r\n  \"number\": \"123456\",\r\n  \"customer\": \"Rafael Melo\",\r\n  \"address\": \"5050 Pie IX\",\r\n  \"status\": \"Shipped\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/orders/save",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"orders",
+								"save"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Save Order",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"date\": \"2023-11-04\",\r\n  \"number\": \"123456\",\r\n  \"customer\": \"Rafael Melo\",\r\n  \"address\": \"5050 Pie IX\",\r\n  \"status\": \"Shipped\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/orders/save",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"orders",
+										"save"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 05 Nov 2023 00:33:49 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"address\": \"5050 Pie IX\",\n    \"number\": \"123456\",\n    \"date\": \"2023-11-04\",\n    \"status\": \"Shipped\",\n    \"customer\": \"Rafael Melo\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Order by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/orders/findById?id=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"orders",
+								"findById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/orders/delete?id=1603",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"orders",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1603"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
